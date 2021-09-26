@@ -5,8 +5,10 @@
 import * as Promise from 'bluebird';
 import * as xml2js from 'xml2js';
 import libEPub = require('./epub');
-export declare const SYMBOL_RAW_DATA: unique symbol;
-export * from './epub';
+// export declare const SYMBOL_RAW_DATA: unique symbol;
+// export * from './epub';
+import m = require("./epub");
+export {m}
 export declare class EPub extends libEPub {
     static createAsync(epubfile: string, imagewebroot?: string, chapterwebroot?: string, ...argv: any[]): Promise<EPub>;
     protected _p_method_cb<T>(method: any, options?: Promise.FromNodeOptions, ...argv: any[]): Promise<T>;
